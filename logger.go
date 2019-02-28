@@ -360,7 +360,7 @@ func (l *Logger) Disable(target interface{}) {
 	}
 }
 
-// Will set context to current logger.
+// SetContext Will set context to current logger.
 // Later appenders will be able to extract context from Log instance.
 func (l *Logger) SetContext(ctx Ctx) *Logger {
 	l.ctx = ctx
@@ -372,7 +372,7 @@ func (l *Logger) AddContextKey(key string, value interface{}) *Logger {
 	return l
 }
 
-// Will copy current logger and return instance of new one.
+// Copy Will copy current logger and return instance of new one.
 func (l *Logger) Copy() *Logger {
 	ctxLogger := &Logger{}
 	*ctxLogger = *l

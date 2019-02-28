@@ -40,7 +40,7 @@ func GetLogger(name string) *Logger {
 	return logger
 }
 
-// Will disable all logs comming from logger with provided name
+// Disable Will disable all logs comming from logger with provided name
 func Disable(name string) {
 	logger := loggers[name]
 	if logger == nil {
@@ -51,7 +51,7 @@ func Disable(name string) {
 	logger.disabled = true
 }
 
-// Will enable all logs comming to logger with provided name
+// Enable Will enable all logs comming to logger with provided name
 func Enable(name string) {
 	logger := loggers[name]
 	if logger == nil {
